@@ -653,7 +653,7 @@
 
 	<section class="slide">
 		<h2>Ленивая загрузка изображений</h2>
-		<p>С 2015 года в вялом обсуждении, но так и не получил реализации</p>
+		<p>С 2015 года в вялом обсуждении, но так и не получила реализации в браузере</p>
 		<p>Реализовали на JS</p>
 		<ul>
 			<li>велосипедим</li>
@@ -766,8 +766,8 @@
 		<pre class="small">
 			<code>&lt;picture&gt;</code>
 			<code>    &lt;source srcset="photo.jxr" <mark>type="image/vnd.ms-photo"</mark>&gt;</code>
-			<code>    &lt;srcset="photo.jp2" <mark>type="image/jp2"</mark>&gt;</code>
-			<code>    &lt;srcset="photo.webp" <mark>type="image/webp"</mark>&gt;</code>
+			<code>    &lt;source srcset="photo.jp2" <mark>type="image/jp2"</mark>&gt;</code>
+			<code>    &lt;source srcset="photo.webp" <mark>type="image/webp"</mark>&gt;</code>
 			<code>    &lt;img src="default.jpg" alt="image description"&gt;</code>
 			<code>&lt;/picture&gt;</code>
 		</pre>
@@ -777,8 +777,8 @@
 		<h2 class="">Отдавайте графику под клиент</h2>
 		<pre class="small">
 			<code>&lt;picture&gt;</code>
-			<code>    &lt;srcset="photo.webp, photo-2x.webp <mark>2x</mark>" <mark>type="image/webp"</mark>&gt;</code>
-			<code>    &lt;srcset="photo-2x.jpg <mark>2x</mark>" <mark>type="image/jpeg"</mark>&gt;</code>
+			<code>    &lt;source srcset="photo.webp, photo-2x.webp <mark>2x</mark>" <mark>type="image/webp"</mark>&gt;</code>
+			<code>    &lt;source srcset="photo-2x.jpg <mark>2x</mark>" <mark>type="image/jpeg"</mark>&gt;</code>
 			<code>    &lt;img src="default.jpg" alt="image description"&gt;</code>
 			<code>&lt;/picture&gt;</code>
 		</pre>
