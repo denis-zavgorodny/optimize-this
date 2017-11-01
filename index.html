@@ -240,14 +240,14 @@
 			<li>ресурсы загружаются с высоким приоритетом</li>
 			<li>ресурсы загружаются с одного домена</li>
 			<li>блокирующая загрузка</li>
-			<li>DOMContentLoaded <big>6s</big></li>
+			<li>DOMContentLoaded <big>6 секунд</big></li>
 			<li>неконтролируемая загрузка фото товаров</li>
 		</ul>
 	</section>
 
 
 	<section class="slide clear" id="timer-slide">
-		<h2 class="shout">Пользователь начнет взаимодействовать с&nbsp;сайтом минимум через&nbsp;6&nbsp;сек</h2>
+		<h2 class="shout">Пользователь начнет взаимодействовать с&nbsp;сайтом минимум через&nbsp;6&nbsp;секунд</h2>
 		<figure>
 			<img class="cover" src="pictures/timer.jpg" alt="Изображение секундомера">
 		</figure>
@@ -388,32 +388,6 @@
 	</section>
 
 	<section class="slide">
-		<div class="jooh-text">
-			<p>Вжух<br />и у нас быстрый сайт</p>
-		</div>
-
-		<figure>
-			<img class="cover" src="pictures/vjuh.jpg" alt="Мем">
-		</figure>
-
-		<style>
-			.jooh-text {
-				width: 60%;
-				margin: 250px 0 0 40%;
-			}
-			.jooh-text p {
-				font-size: 50px;
-			}
-			.jooh-text i {
-				display: block;
-				text-align: right;
-			}
-		</style>
-	</section>
-
-
-
-	<section class="slide">
 		<h2>Подходы к оптимизации</h2>
 		<ul class="middle-list">
 			<li>оптимизация скорости сайта при первой загрузке</li>
@@ -447,18 +421,16 @@
 	</section>
 
 	<section class="slide">
+		<h2>Как было</h2>
 		<pre class="small">
-			<code>...</code>
 			<code><mark>&lt;head&gt;</mark></code>
 			<code>    &lt;link rel="stylesheet" href="main.css"&gt;</code>
 			<code>    &lt;script src="small.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="main.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="second-1.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="second-2.js"&gt;&lt;/script&gt;</code>
-			<code>...</code>
 			<code>    &lt;script src="second-7.js"&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/head&gt;</mark></code>
-			<code>...</code>
 		</pre>
 	</section>
 
@@ -475,16 +447,15 @@
 	</section>
 
 	<section class="slide">
+		<h2>Популярный совет</h2>
 		<pre class="small">
 			<code><mark>&lt;head&gt;</mark></code>
 			<code>    &lt;link rel="stylesheet" href="main.css"&gt;</code>
 			<code>    &lt;script src="small.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="main.js"&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/head&gt;</mark></code>
-			<code>...</code>
 			<code>    &lt;script src="second-1.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="second-2.js"&gt;&lt;/script&gt;</code>
-			<code>...</code>
 			<code>    &lt;script src="second-7.js"&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/body&gt;</mark></code>
 		</pre>
@@ -497,16 +468,15 @@
 	</section>
 
 	<section class="slide">
+		<h2>Добавляем асинхронности</h2>
 		<pre class="small">
 			<code><mark>&lt;head&gt;</mark></code>
 			<code>    &lt;link rel="stylesheet" href="main.css"&gt;</code>
 			<code>    &lt;script src="small.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="main.js"&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/head&gt;</mark></code>
-			<code>...</code>
 			<code>    &lt;script src="second-1.js" <span style="color: red;">defer</span>&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="second-2.js" <span style="color: red;">defer</span>&gt;&lt;/script&gt;</code>
-			<code>...</code>
 			<code>    &lt;script src="second-7.js" <span style="color: red;">defer</span>&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/body&gt;</mark></code>
 		</pre>
@@ -519,16 +489,15 @@
 	</section>
 
 	<section class="slide">
+		<h2>Нужно больше асинхронности</h2>
 		<pre class="small">
 			<code><mark>&lt;head&gt;</mark></code>
 			<code>    &lt;link rel="stylesheet" href="main.css"&gt;</code>
 			<code>    &lt;script src="small.js"&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="main.js"&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/head&gt;</mark></code>
-			<code>...</code>
 			<code>    &lt;script src="second-1.js" <span style="color: red;">async</span>&gt;&lt;/script&gt;</code>
 			<code>    &lt;script src="second-2.js" <span style="color: red;">async</span>&gt;&lt;/script&gt;</code>
-			<code>...</code>
 			<code>    &lt;script src="second-7.js" <span style="color: red;">async</span>&gt;&lt;/script&gt;</code>
 			<code><mark>&lt;/body&gt;</mark></code>
 		</pre>
@@ -643,9 +612,9 @@
 	<section class="slide">
 		<h2>Ленивая загрузка изображений</h2>
 		<pre class="small">
-			<code>&lt;img src="blank.gif" data-src="cool.jpg"&gt;</code>
+			<code>&lt;img src="blank.gif" <mark>data-src</mark>="cool.jpg"&gt;</code>
 			<code><span class="comment">/* или */</span>&nbsp;</code>
-			<code>&lt;img src="cool-patch.svg" data-src="cool.jpg"&gt;</code>
+			<code>&lt;img src="cool-patch.svg" <mark>data-src</mark>="cool.jpg"&gt;</code>
 
 			<code>...</code>
 		</pre>
@@ -704,7 +673,7 @@
 		<h2>Critical CSS</h2>
 		<ul>
 			<li>сложно поддерживать</li>
-			<li>некоторые блоки "моргают"</li>
+			<li>некоторые блоки мелькают</li>
 			<li>пока отказались</li>
 		</ul>
 	</section>
@@ -721,7 +690,7 @@
 				<td style="vertical-align: middle;"><img width="200" src="pictures/browsers.jpg" alt=""></td>
 			</tr>
 			<tr>
-				<td>WEBP</td>
+				<td>WebP</td>
 				<td style="vertical-align: middle;"><img width="85" src="pictures/browsers-webkit.jpg" alt=""></td>
 			</tr>
 			<tr>
@@ -736,7 +705,7 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="">WEBP</h2>
+		<h2 class="">WebP</h2>
 		<table>
 			<tr>
 				<td width="50%">
@@ -751,7 +720,7 @@
 		</table>
 	</section>
 	<section class="slide">
-		<h2 class="">WEBP</h2>
+		<h2 class="">WebP</h2>
 		<ul>
 			<li>открытый формат</li>
 			<li>экономия до <big>10 раз</big></li>
@@ -843,7 +812,7 @@
 	<section class="slide">
 		<h2>Что выбрать?</h2>
 		<ul>
-			<li>конвертировать на хите – дорого</li>
+			<li>конвертировать во время загрузки страницы – дорого</li>
 			<li>конвертировать пакетно в фоне – долго</li>
 			<li>...</li>
 		</ul>
@@ -891,9 +860,10 @@
 	<section class="slide">
 		<h2 class="">Не думайте о том, что умеет клиент</h2>
 		<pre class="small">
-			<code>&lt;picture&gt;</code>
+			<code><del>&lt;picture&gt;</del></code>
+			<code>    <del>&lt;source srcset="photo.webp" type="image/webp"&gt;</del></code>
 			<code>    &lt;img src="photo.jpg" alt="image description"&gt;</code>
-			<code>&lt;/picture&gt;</code>
+			<code><del>&lt;/picture&gt;</del></code>
 		</pre>
 		<code>Accept: image/webp</code></p>
 
@@ -1053,6 +1023,31 @@
 			</tr>
 		</table>
 	</section>
+
+	<section class="slide">
+		<div class="jooh-text">
+			<p>Вжух<br />и у нас быстрый сайт</p>
+		</div>
+
+		<figure>
+			<img class="cover" src="pictures/vjuh.jpg" alt="Мем">
+		</figure>
+
+		<style>
+			.jooh-text {
+				width: 60%;
+				margin: 250px 0 0 40%;
+			}
+			.jooh-text p {
+				font-size: 50px;
+			}
+			.jooh-text i {
+				display: block;
+				text-align: right;
+			}
+		</style>
+	</section>
+
 	<section class="slide">
 		<h2>Спасибо!</h2>
 		<table class="simple-table">
