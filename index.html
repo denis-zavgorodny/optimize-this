@@ -50,7 +50,7 @@
 			font-size: 20px;
 		}
 		.slide big {
-			font-size: 40px;
+			font-size: 37px;
 		}
 		.slide h2.long {
 			font-size: 100px;
@@ -69,6 +69,11 @@
 			right: 10%;
 			-webkit-transform: translate(0,-50%);
 					transform: translate(0,-50%);
+		}
+		h3.subtitle {
+			color: #585a5e;
+    		font: 700 40px/1 PT Sans Narrow,sans-serif;
+			padding-bottom: 20px;
 		}
 	</style>
 </head>
@@ -896,10 +901,8 @@
 	<section class="slide">
 		<h2>Кэширование</h2>
 		<ul>
-			<li>статические ресурсы на клиенте</li>
-			<li>динамические ресурсы на клиенте</li>
-			<li>статические ресурсы на сервере</li>
-			<li>динамические ресурсы на сервере</li>
+			<li>статические / динамические ресурсы на клиенте</li>
+			<li>статические / динамические ресурсы на сервере</li>
 			<li>результаты SSL Handshake</li>
 			<li>...</li>
 		</ul>
@@ -942,32 +945,27 @@
 	</section>
 
 	<section class="slide">
-		<h2>Cache-Control [HTTP 1.1]</h2>
+		<h2>HTTP 1.1</h2>
+		<h3 class="subtitle">Cache-Control</h3>
 		<ul>
 			<li>max-age=ХХ (время в сек)</li>
-			<li>private | public</li>
-			<li>no-cache</li>
-			<li>no-store</li>
-			<li>must-revalidate</li>
-			<li>...</li>
-
 		</ul>
-	</section>
 
-	<section class="slide">
-		<h2>Expires [HTTP 1.0]</h2>
-		<ul>
-			<li><code>Expires: Wed, 16 Nov 2017 07:28:00 GMT</code></li>
-			<li>устаревший аналог <big>max-age</big></li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>ETag [HTTP 1.1]</h2>
+		<h3 class="subtitle">ETag</h3>
 		<ul>
 			<li><code>ETag: "59a49fa0-b9ac"</code></li>
 			<li>требуется запрос на сервер</li>
 			<li>более тонкая работа с кэшем</li>
+		</ul>
+
+	</section>
+
+	<section class="slide">
+		<h2>HTTP 1.0</h2>
+		<h3 class="subtitle">Expires</h3>
+		<ul>
+			<li><code>Expires: Wed, 16 Nov 2017 07:28:00 GMT</code></li>
+			<li>устаревший аналог <big>max-age</big></li>
 		</ul>
 	</section>
 
